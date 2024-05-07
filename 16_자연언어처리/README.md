@@ -8,6 +8,25 @@
 7. Machine Translation
 8. Question Answering
 9. Conversational System
+10. Overview AI
+11. Problem solving 1
+12. Problem solving 2
+13. Model representation
+14. Training - Part 1
+15. Training - Part 2
+16. Training - Part 3
+17. Training - Part 4
+18. Evaluation
+19. Probabilistic model intro
+20. Representations of Probabilistic Models - Bayesian Networks
+21. Markov Network1,2
+22. Predicate calculus
+23. Representations of Probabilistic Models - Inductive Logic Programming
+24. Representations of Probabilistic Models - Neural Network
+25. Bayesian Logic Programming
+26. Markov Logic Network
+27. Formal Grammar
+28. Probabilistic Context Free Grammar
 
 # 1. NLP Overview
 ### AI Methods applied to NLP
@@ -228,7 +247,6 @@ ex) 컴퓨터에게 이차방정식을 풀게 하고 싶다.
     - traffic optimization
     - self driving car
 
-
 # 12. problem solving 2
 ### What is understanding
 Understanding is … : 이차방정식을 풀 때 성공적인 100개의 연속된 시퀀스가 있다고 하자. 이 때 여기서 중요한 규칙을 발견할 수 있을까? 다른 말로 표현하면 sequence를 생성하기 위해 knowledge 또는 strategy를 발견할 수 있을까?
@@ -289,10 +307,13 @@ Optimization
         - …
     - approximation
         - stochastic gradient descent
-- in mathematics
-![](images/8.png)
+- optimization problem types in mathematics
+![](images/17.png)
+_(https://neos-guide.org/content/optimization-taxonomy)_
 - example issues to consider in practical use
 ![](images/9.png)
+_(Meneses, Pedro Sebastián Gómez. Extremal Optimisation Applied to Constrained
+Combinatorial Multi-Objective Optimisation Problems. Bond University, 2012.)_
 - in algorithmic approach
 
 # 15. Training - Part 2
@@ -326,7 +347,7 @@ Generalization - method
 # 18. Evaluation
 regression, classification metrics
 
-# 19. probabilistic model intro
+# 19. Probabilistic model intro
 Framework of Building a Probabilistic Model
 - Generative vs Discriminative models
 
