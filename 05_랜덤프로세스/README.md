@@ -56,7 +56,7 @@
 **Applying set theory to probability**
 - sample space vs event
   - 여기서 sample space와 event를 특히 잘 구분하자. sample space는 possible outcomes(event)을 전부 포함한 space 이다. 쉽게말해 가능한 모든 결과의 집합이다.
-  - Null space $\emptyset: space에 possible한 outcome이 없다는거고 $P(\emptyset)=0$ 가 된다.
+  - Null space $\emptyset$ : space에 possible한 outcome이 없다는거고 $P(\emptyset)=0$ 가 된다.
   - Event A, B가 mutually exclusive 하다면, $P(AB) = 0$ 일 것.
 - probability를 P라는 함수로 볼 수도 있는데, sample space의 event가 real number space으로 mapping 된다고 볼 수도 있다. 이런 관점도 생각해두자.
 
@@ -67,7 +67,7 @@
 $$P(A | M) = \frac{P(AM)}{P(M)}$$
 
 **Law of total probability**
-- For an event space $${B_1, B_2, ..., B_m}이 있다고 할 때, 물론 이 event space는 모두 MECE하다고 가정한다. 
+- For an event space ${B_1, B_2, ..., B_m}$이 있다고 할 때, 물론 이 event space는 모두 MECE하다고 가정한다. 
   $$P(A) = \sum_{i=1}^{m}P(A \cap B_i) = \sum_{i=1}^{m}P(A|B_i)P(B_i)$$
 
 ![](images/1.png)
@@ -81,7 +81,7 @@ $$P(B | A) = \frac{P(A | B)P(B)}{P(A)}$$
   $$P(AB) = P(A)P(B)$$
 - mutually exclusive와는 다르다. mutually exclusive는 두 set이 겹치는게 없다는거고, 두 set이 일부 겹치는게 있어도 각 확률이 independent할 수 있다.
 - 그리고 3개의 이벤트 $A_1, A_2, A_3$이 independent하다는 것은, 서로 다른 2개의 이벤트에 대해서도 독립이고, 3개의 이벤트에 대해서도 독립이어야한다. 수식으로 나타내면 아래와 같다.
-  $$P(A_{i}A_{j})=P(A_i)P(A_j) \quad i \neq j \quad \& \quad P(A_{1}A_{2}A_{3}) = P(A_1)P(A_2)P(A_3)$$
+  $$P(A_{i}A_{j})=P(A_i)P(A_j) \quad (i \neq j), \quad P(A_{1}A_{2}A_{3}) = P(A_1)P(A_2)P(A_3)$$
 
 **Bernoulli trials**
 - indepedent trial + only two outcomes 이 두가지를 만족하는 trial이 bernoulli trial 이다.
@@ -90,7 +90,7 @@ $$P(B | A) = \frac{P(A | B)P(B)}{P(A)}$$
 
 **Binomial distribution, Poisson distribution**
 - bernoulli trials로 부터 확률 분포를 얻게 되면 binomial distribution을 얻게된다.
-- 이때 시행 N, 시행에 대한 성공 확률이 p라고 하고, N >> 1, p << 1 일 때, Binomial distribution을 Poisson distribution으로 근사시킬 수 있다. 시행을 굉장히 많이하고, 확률이 1보다 매우 작다 가정하고 근사한다.
+- 이때 시행 N, 시행에 대한 성공 확률이 p라고 하고, $N \gg 1, p \ll 1$ 일 때, Binomial distribution을 Poisson distribution으로 근사시킬 수 있다. 시행을 굉장히 많이하고, 확률이 1보다 매우 작다 가정하고 근사한다.
 
 **De Moivre-Laplace Theorem**
 
@@ -101,10 +101,10 @@ $$P(B | A) = \frac{P(A | B)P(B)}{P(A)}$$
 - The outcome of a random experiment needs not be a number, but we are usually interested not in the outcome itself, but rather the numerical attribute of the outcome (여기서는 outcome이 numerical 한 것만 다루겠다)
 
 **Cumulative distribution function(CDF)**
-$$F_x(x) = P(X \le x),  \quad F_x(-\infty) = 0, F_x(+\infty) = 1 $$
+$$F_x(x) = P(X \le x),  \quad F_x(-\infty) = 0, \quad F_x(+\infty) = 1 $$
 
 **Probability density function(PDF)**
-$$f_X(x) = \frac{dF_x(x)}{dx}, \quad f_X(x) \ge 0, \int_{-\infty}^{\infty}f_X(x)dx = 1$$
+$$f_X(x) = \frac{dF_x(x)}{dx}, \quad f_X(x) \ge 0, \quad \int_{-\infty}^{\infty}f_X(x)dx = 1$$
   - Probability Mass Function
 
 **Commonly used random variables**
@@ -152,10 +152,6 @@ $$E[x] = \int_{-\infty}^{\infty}xf_X(x)dx$$
   - joint central moments
     - $M_{ij} = E[(X-E[X])^i(Y-E[Y])^j] = \int_{-\infty}^{\infty}(x-\eta_X)^i(y-\eta_Y)^j f_{XY}(x, y)dxdy$
     - covariance: $C_{X, Y} = E[(X-E[X])(Y-E[Y])] = E[XY] - E[X]E[Y]$ ($i, j$가 1일 때)
-  - correlation coefficient(상관계수) of $X, Y$: 
-    - $\rho_{XY} = \frac{E[(X-E[X])(Y-E[Y])]}{\sqrt{E[(X-E[X])^2]E[(Y-E[Y])^2]}} = \frac{M_{11}}{\sqrt{\rho_{X}^2\rho_{Y}^2}} = \frac{M_{11}}{\rho_{X}\rho_{Y}} = R_{\frac{X - E[X]}{\sigma_X}, \frac{Y - E[Y]}{\sigma_Y}} = C_{\frac{X}{\sigma_X}, \frac{Y}{\sigma_Y}}$
-    - $\rho_{XY}=0$ 이면 $X, Y$가 uncorrelated 하다. 역도 성립한다.
-    - unitless 하고 $-1 \le \rho \le 1$ 의 범위를 가진다.
   - correlation
     - $E[XY]$ 를 random variable $X, Y$의 correlation이라고 정의하며 kg, m 와 같은 unit이 존재하며 $R_{XY}$ 로 표기한다.
     - $R_{XY} = E[XY] = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{X, Y}(x, y)dxdy$ 이다.
@@ -167,15 +163,19 @@ $$E[x] = \int_{-\infty}^{\infty}xf_X(x)dx$$
   - orthogonal
     - $E[XY] = 0$
     - algebraic 한 것을 geometric 하게 해석가능
+  - correlation coefficient(상관계수) of $X, Y$: 
+    - $\rho_{XY} = \frac{E[(X-E[X])(Y-E[Y])]}{\sqrt{E[(X-E[X])^2]E[(Y-E[Y])^2]}} = \frac{M_{11}}{\sqrt{\rho_{X}^2\rho_{Y}^2}} = \frac{M_{11}}{\rho_{X}\rho_{Y}} = R_{\frac{X - E[X]}{\sigma_X}, \frac{Y - E[Y]}{\sigma_Y}} = C_{\frac{X}{\sigma_X}, \frac{Y}{\sigma_Y}}$
+    - $\rho_{XY}=0$ 이면 $X, Y$가 uncorrelated 하다. 역도 성립한다.
+    - unitless 하고 $-1 \le \rho \le 1$ 의 범위를 가진다.
 
 **Markov & Chebyshev inequality**
 $$P(R \ge a) \le \frac{E[R]}{a} \quad P(|X - \eta_X| \ge a) \le \frac{\sigma_X^2}{a^2}$$
 
 **Moment generation function(MGF)**
-- PDF가 존재한다면, moment generation function(MGF)는 다음과 같이 정의될 수 있다
   $$\Psi_X(s) = E[e^{sX}] = \int_{-\infty}^{\infty}e^{sx}f_X(x)dx$$
+- PDF가 존재한다면, moment generation function(MGF)는 위와 같이 정의될 수 있다
 - MGF는 존재하지 않을수도 있지만 존재하면 상당히 유용하다.
-- $\frac{d^n}{ds^n} \Psi_X(s) = E[\frac{d^n}{ds^n} e^{sX}] = E[X^ne^{sX}]$ 처럼 s에 대해 n번 미분하고 s에 0을 대입하면 n order moment를 구할 수 있고 그래서 moment를 generation 하는 function 을 위처럼 정의했다
+- $\frac{d^n}{ds^n} \Psi_X(s) = E[\frac{d^n}{ds^n} e^{sX}] = E[X^ne^{sX}]$ 처럼 s에 대해 n번 미분하고 s에 0을 대입하면 nth order moment를 구할 수 있고 그래서 moment를 generation 하는 function 을 위처럼 정의했다
 
 **Characteristic function**
   $$\Phi_X(\omega) = E[e^{j\omega X}] = \int_{-\infty}^{\infty} e^{j\omega x}f_X(x)dx$$
@@ -198,6 +198,7 @@ $$E[(Y - \Sigma_{i=1}^{N}a_iX_i)X_j] = 0, \quad (j=1, 2, ... N)$$
 
 ### Lec8
 **Expected value vector, correlation, covariance matrix**
+
 **Generalize Gaussian random variable**
 - gaussian distribution은 다양한 technical field(ex. communication theory, detection theory, signal processing, pattern recognition, machine learning, control theory) 에서 random signal을 모델링하는데 중요한 역할을 한다.
 - univariate normal random variable
@@ -246,7 +247,7 @@ $$E[(Y - \Sigma_{i=1}^{N}a_iX_i)X_j] = 0, \quad (j=1, 2, ... N)$$
     $$C_X(t_1, t_2) = E[(X(t_1) - \eta(t_1))(X(t_2) - \eta(t_2))]$$
   - $R_X(t_1, t_2)$를 알면 랜덤 프로세스의 sample function이 얼마나 빠르게 또는 느리게 변하는지를 알 수 있고 결과적으로 주파수 f 성분에 대해 알 수 있다. 뒤에서 보겠지만 랜덤 프로세스의 PSD(power spectral density)는 $R_X$의 푸리에 변환으로 주어진다
 - random variable은 불확실한 사건을 숫자로 모델링하는데 사용하고, random process는 불확실한 신호를 모델링하는데 사용한다.
-- 그리고 크게 time domain(temperal)과 frequency domain(spectral)에서 random process의 특성에 대해 나타내는 법을 배운다.
+- 그리고 크게 time domain(temporal)과 frequency domain(spectral)에서 random process의 특성에 대해 나타내는 법을 배운다.
 
 **Types of stochastic processes**
 - $X(t)$ is a continuous-time random process if $t$ takes any value on the set of real numbers R.
@@ -271,7 +272,10 @@ $$E[(Y - \Sigma_{i=1}^{N}a_iX_i)X_j] = 0, \quad (j=1, 2, ... N)$$
 - A counting process $X(t) = n(0, t)$ is a Poisson process of rate $\lambda$
 - For a given $t$, $X(t)$ is a poisson random variable with a parameter $\lambda t$
   $$P_{X(t)}(k) = \frac{(\lambda t)^k}{k!} e^{-\lambda t}, \quad E[X(t)] = \sigma_{X(t)}^2 = \lambda t$$
-  $$ R_X(t_1, t_2) = \begin{cases} \lambda t_2 + \lambda^2 t_1 t_2 \quad (t_1 \ge t_2) \\ \lambda t_1 + \lambda^2 t_1 t_2 \quad (t_1 \le t_2) \end{cases} $$
+  $$R_X(t_1, t_2) = \begin{cases}
+      \lambda t_2 + \lambda^2 t_1 t_2 \quad (t_1 \ge t_2) \\
+      \lambda t_1 + \lambda^2 t_1 t_2 \quad (t_1 \le t_2)
+  \end{cases}$$
 
 **Incremental Poisson process**
 $$Y(t) = \frac{X(t+ \epsilon) - X(t)}{\epsilon}, \quad E[Y(t)] = \lambda, \quad R_Y(\tau) \rightarrow \delta(\tau) \quad as \quad \epsilon \rightarrow 0$$
@@ -300,7 +304,7 @@ $$Y(t) = \frac{X(t+ \epsilon) - X(t)}{\epsilon}, \quad E[Y(t)] = \lambda, \quad 
 - $X(t)$ is a Gaussian random process iff $\vec{X} = [X(t_1), X(t_2), ..., X(t_k)]$ is a Gaussian random vector for any integer $k > 0$ and any set of time instants $t_1, t_2, ..., t_k$
 
 **Brownian motion process(Wiener process)**
-- A Brownian motion process $W(t)$는 다음의 성질을 만족한다. (1) $W(0) = 0$ 이고 (2) 현재 state와 $\tau$ 만큼 차이나는 state 간의 차이(increment, $W(t+\tau) - W(t)$)가 평균이 0이고 분산이 $\alpha \tau$인 정규분포를 따르고 (3) 모든 $t' \le t$에 대해 $W(t')$가 독립이다.
+- A Brownian motion process $W(t)$는 다음의 성질을 만족한다. (1) $W(0) = 0$ 이고 (2) 현재 state와 $\tau$ 만큼 차이나는 state 간의 차이(increment, $W(t+\tau) - W(t)$ )가 평균이 0이고 분산이 $\alpha \tau$인 정규분포를 따르고 (3) 모든 $t' \le t$에 대해 $W(t')$가 독립이다.
 - Wiener process는 예를들어 액체안의 particle이 어떻게 확산되는지 등 real world의 다양한 randomness를 표현하기 위해 사용한다.
 
 ### Lec 16
@@ -348,7 +352,7 @@ $$S_X(f) = \int_{-\infty}^{\infty} R_X(\tau)e^{-j2\pi f\tau} d\tau, \quad R_X(\t
 - Mean-ergodic 말고 Variance-ergodic, Covariance-ergodic 도 있다.
 - 에르고딕성을 직관적으로 이해보기 위해 주사위 던지기를 한다고 해보자. 주사위를 던져서 나오는 값의 평균을 구하는 두 가지 방법이 있는데 한 주사위를 매우 많이 던져서 그 평균을 구하는 방법과(시간 평균) 여러 주사위를 동시에 던져서 평균을 구하는 방법이 있다 (Ensemble 평균) 이때 주사위가 공정하다면 두 평균은 동일해야 하고, 이는 주사위 던지기는 ergodicity를 가진다는 것을 의미한다.
 - 하나의 sample path를 볼 때, 예를들어 주식 그래프를 보면 미래 예측이 불가능한데, ergodic 가정에서 보면 꽤나 예측을 잘하고 할 수 있는 일이 많아진다. ergocity는 sample path 하나를 잘 관찰하면 다른 가능한 sample path의 통계를 알 수 있음을 의미한다. 당연히 모든 process가 ergodic하지 않으므로 process가 ergodic한지 안한지 확인하는 과정이 필요하다.
-- white noise가 ergodic 하는 경우가 많고 또 상태 전이 확률이 시간에 대해 일정한 markov process 는 ergodic 할 수 있다.
+- white noise가 ergodic 하는 경우가 많고 또 상태 전이 확률이 시간에 대해 일정한 markov process도 ergodic 할 수 있다.
 
 ### Lec19
 **Properties of auto-correlation function(ACF)**
