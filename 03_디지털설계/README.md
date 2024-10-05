@@ -82,13 +82,11 @@ How to combine many transistors in a compact, efficient, fast, reliable way?  In
   - PLD는 제조 후에 사용자가 내부 논리 회로의 구조를 변경할 수 있는 집적 회로이다. 초기에는 설계시 사양이나 기능이 정해져서 제조되기 때문에 나중에 회로 구성을 변경할 수 없었지만 지금은 논리 설계를 변경할 수 있다. PLD의 종류로 PLA(programmable logic array), PAL(programmable array logic), CPLD(complex programmable logic device), FPGA가 존재한다. 이러한 논리 회로 설계는 FPGA나 CPLD와 같은 프로그래밍 가능한 device를 컴퓨터와 연결한 후 VHDL이나, Verliog와 같은 설계언어를 사용하여 다양한 logic function을 만들 수 있다.
 
 ### Design flow
-1. Design entry: System design by _hardware description language(HDL)_
+1. Design entry: System design by hardware description language(HDL)
 2. Functional simulation: Verifying the design by checking the input/output
 3. Synthesis
-4. Place and route(배치 및 배선)
-    - 제한된 공간에 전자부품(ex. registor, capacitor, inductor, 전원장치 등), 회로, 논리 부품을 어디에 배치할 것인지 결정하고 배선을 연결하는 과정
-5. Timing verification: Checking the timing problems due to propagation delay
-  - propagation delay(전달 지연): 신호가 입력 신호가 들어가고 출력 신호가 나올 때까지 걸리는 시간이다.
+4. Place and route(배치 및 배선): 제한된 공간에 전자부품(ex. registor, capacitor, inductor, 전원장치 등), 회로, 논리 부품을 어디에 배치할 것인지 결정하고 배선을 연결하는 과정
+5. Timing verification: Checking the timing problems due to propagation delay (propagation delay(전달 지연): 신호가 입력 신호가 들어가고 출력 신호가 나올 때까지 걸리는 시간)
 6. Download
   ![](images/3.png)
 

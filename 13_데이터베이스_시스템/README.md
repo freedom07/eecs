@@ -16,30 +16,32 @@
 # Part3: Application Design and Development
 8. Complex Data Types
 9. Application Development
+
+# Part4: Big Data Analytics
 10. Big Data
 11. Data Analysis
 
-# Part4: Storage Management
+# Part5: Storage Management
 12. Physical Storage Systems
 13. Data Storage Structures
 14. Indexing
 
-# Part5: Querying
+# Part6: Querying
 15. Query Processing
 16. Query Optimization
 
-# Part6: Transaction Management
+# Part7: Transaction Management
 17. Transactions
 18. Concurrency Control
 19. Recovery System
 
-# Part7: Parallel and Distributed Databases
+# Part8: Parallel and Distributed Databases
 20. Database System Architectures
 21. Parallel and Distributed Storage
 22. Parallel and Distributed Query Processing
 23. Parallel and Distributed Transaction Processing
 
-# Part8: Advanced Topics
+# Part9: Advanced Topics
 24. Advanced Indexing Techniques
 25. Advanced Application Development
 26. Blockchain Databases

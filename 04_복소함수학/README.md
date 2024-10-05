@@ -1,7 +1,7 @@
 책: [Complex Variable](https://product.kyobobook.co.kr/detail/S000002607395)
 
 # 1. The complex plane
-1. The complex Numbers and the complex plane
+1. The complex numbers and the complex plane
 2. Some Geometry
 3. Subsets of the plane
 4. Functions and Limits

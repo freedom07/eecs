@@ -235,8 +235,7 @@ $$E[(Y - \Sigma_{i=1}^{N}a_iX_i)X_j] = 0, \quad (j=1, 2, ... N)$$
 ### Lec12
 **Stochastic (random) process definitions and examples**
 - A rule for assigning to every $\zeta$ a function $X(t, \zeta)$
-- Random process는 sample space에서 랜덤한 함수를 추출하는 과정으로도 볼 수 있다. 다양한 sample function의 모양이 나올 수 있음
-  ![](images/3.png)
+- Random process는 sample space에서 랜덤한 함수를 추출하는 과정으로도 볼 수 있다. 다양한 sample function의 모양이 나올 수 있음 (아래 그림 참고)
 - CDF, PDF of 2nd order random process
   $$F_X(x_1, x_2, t_1, t_2) = P(X(t_1) \le x_1, X(t_2) \le x_2)$$
   $$f_X(x_1, x_2, t_1, t_2) = \frac{\partial^2 F_X(x_1, x_2, t_1, t_2)}{\partial x_1 x_2}$$
@@ -249,11 +248,14 @@ $$E[(Y - \Sigma_{i=1}^{N}a_iX_i)X_j] = 0, \quad (j=1, 2, ... N)$$
 - random variable은 불확실한 사건을 숫자로 모델링하는데 사용하고, random process는 불확실한 신호를 모델링하는데 사용한다.
 - 그리고 크게 time domain(temporal)과 frequency domain(spectral)에서 random process의 특성에 대해 나타내는 법을 배운다.
 
+![](images/3.png)
+
 **Types of stochastic processes**
 - $X(t)$ is a continuous-time random process if $t$ takes any value on the set of real numbers R.
 - $X(t)$ is a discrete-time random process if $t$ takes only countable values, e.g the set of integers I.
 - $X(t)$ is a continuous-state (value) random process if $t$ takes any value on the set of real numbers R.
 - $X(t)$ is a discrete-state (value) random process if $t$ takes only countable values.
+
 ![](images/4.png)
 
 **Stationary of stochastic process**
